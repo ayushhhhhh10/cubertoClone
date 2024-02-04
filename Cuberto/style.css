@@ -1,0 +1,621 @@
+@font-face {
+  font-family: Matter;
+  src: url(/Font/Matter-Regular.ttf);
+}
+@font-face {
+  font-family: Matter-light;
+  src: url(/Font/Matter-Light.ttf);
+}
+@font-face {
+  font-family: Matter-lighter;
+  src: url(/Font/Matter-LightItalic.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Matter-light;
+}
+
+*::selection {
+  color: blue;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+}
+
+#circle {
+  height: 10px;
+  width: 10px;
+  color: #fff;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  opacity: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#circle h4 {
+  color: #000;
+}
+#page-1 {
+  height: 110vh;
+  width: 100%;
+  position: relative;
+}
+#menu-page {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3vw;
+  gap: 1vw;
+  background-color: #111;
+  position: absolute;
+  border-radius: 20px 0 0 20px;
+  right: -100%;
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+}
+#menu-page h2 {
+  font-size: 4.5vw;
+  color: #fff;
+  width: fit-content;
+  border-bottom: 5px #fff solid;
+  font-family: Matter-lighter;
+  font-weight: 100;
+  cursor: pointer;
+}
+#menu-page h2:hover {
+  font-family: Matter-light;
+  border-bottom: none;
+}
+#nav {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav img {
+  height: 70px;
+  width: 130px;
+  object-fit: cover;
+}
+#nav-ryt {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+#nav-ryt h3 {
+  font-size: 1.3vw;
+  font-weight: 100;
+}
+#icon {
+  margin-top: 6px;
+  font-size: 1.6vw;
+}
+#heading {
+  margin-top: 5vw;
+  margin-left: 11vw;
+}
+.head {
+  height: 10vw;
+  overflow: hidden;
+}
+#heading h1 {
+  font-size: 8.5vw;
+  font-weight: 500;
+  line-height: 8vw;
+  letter-spacing: -4px;
+}
+#heading video {
+  height: 8vw;
+  width: 10vw;
+  overflow: hidden;
+  border-radius: 60px;
+  object-fit: cover;
+}
+#page-2 {
+  height: 100vh;
+  width: 100%;
+}
+#page-2 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#page-3 {
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 50px;
+}
+#p3left {
+  height: 32vw;
+  width: 32vw;
+}
+#p3left video {
+  height: 100%;
+  width: 100%;
+}
+#p3ryt {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3.5vw;
+  width: 50%;
+}
+#p3ryt p {
+  width: 67%;
+  font-size: 2vw;
+  font-weight: 600;
+  line-height: 2.5vw;
+}
+#p3btn {
+  padding: 80px 130px;
+  border: 1px black solid;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+#p3btn h3 {
+  font-size: 2vw;
+  font-weight: 600;
+}
+#p3btn h3::after {
+  content: "How we work";
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#p3btn:hover h3::after {
+  bottom: 0;
+  border-radius: 0;
+}
+#project-page {
+  width: 100%;
+  background-color: #161616;
+  border-radius: 80px;
+  padding: 10vw;
+}
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+}
+#project-heading h1 {
+  font-size: 10vw;
+  font-weight: 500;
+  line-height: 8vw;
+  letter-spacing: -4px;
+  color: #fff;
+}
+#project-heading video {
+  height: 130px;
+  width: 180px;
+  overflow: hidden;
+  border-radius: 60px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+.project-1 {
+  height: fit-content;
+  width: fit-content;
+  margin-top: 100px;
+}
+.project-2 {
+  height: fit-content;
+  width: fit-content;
+  margin-top: 100px;
+}
+#image-container1 {
+  height: 42vw;
+  width: 32vw;
+  border-radius: 50px;
+  overflow: hidden;
+}
+#image-container2 {
+  height: 32vw;
+  width: 32vw;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.project-1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.project-2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.project-1 h2 {
+  color: #fff;
+  margin-top: 25px;
+  font-size: 1.5vw;
+}
+.project-2 h2 {
+  color: #fff;
+  margin-top: 25px;
+  font-size: 1.5vw;
+}
+.project-2:nth-child(5) {
+  margin-top: -50px;
+}
+#philosophy {
+  padding: 10vw;
+}
+#philosophy h1 {
+  font-size: 10vw;
+  font-weight: 400;
+}
+#para {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6vw;
+}
+#para video {
+  height: 32vw;
+  width: 32vw;
+  object-fit: cover;
+}
+#para p {
+  width: 45%;
+  font-size: 1.5vw;
+  font-weight: 600;
+  line-height: 2.5vw;
+}
+.loop {
+  width: 100%;
+  position: relative;
+  left: -150%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5vw;
+}
+.loops {
+  animation-name: anime;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.loop h1 {
+  font-size: 13vw;
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: -10px;
+}
+.loop video {
+  height: 110px;
+  width: 160px;
+  overflow: hidden;
+  border-radius: 50px;
+  object-fit: cover;
+}
+@keyframes anime {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+#project-window {
+  height: fit-content;
+  display: flex;
+  align-items: flex-end;
+  gap: 2vw;
+  flex-wrap: nowrap;
+  overflow: auto;
+  padding: 8vw;
+  scroll-snap-type: x mandatory;
+}
+#project-window::-webkit-scrollbar {
+  display: none;
+}
+.window1 {
+  height: 15vw;
+  width: 22vw;
+  /* background-color: #161616; */
+  border-radius: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+.window1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.window2 {
+  height: 22vw;
+  width: 22vw;
+  /* background-color: #161616; */
+  border-radius: 30px;
+  flex-shrink: 0;
+  overflow: hidden;
+  scroll-snap-align: center;
+}
+.window2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#footer {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+#footer video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#footer-details {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#footer-details h1 {
+  line-height: 9vw;
+  color: #fff;
+  font-size: 10vw;
+  font-weight: 100;
+}
+#footer-details i {
+  color: #fff;
+  font-size: 8vw;
+  font-weight: 100;
+}
+#footer-button {
+  margin-top: 2vw;
+  padding: 0 2vw;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+}
+#footer-button h3 {
+  color: #fff;
+  font-size: 8vw;
+  font-weight: 100;
+}
+#footer-button h3::after {
+  content: "TELL US";
+  color: #000;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#footer-button:hover h3::after {
+  bottom: 0;
+  border-radius: 0;
+}
+#footer h5 {
+  margin-top: 8vw;
+  color: white;
+  font-weight: 100;
+}
+
+@media (max-width: 600px) {
+  #circle {
+    display: none;
+  }
+  #page-1 {
+    height: 60vh;
+  }
+  #menu-page {
+    height: 60vh;
+  }
+  #menu-page h2 {
+    font-size: 7vw;
+  }
+  #nav {
+    padding: 8px 15px;
+  }
+  #nav-ryt h3 {
+    display: none;
+  }
+  #icon {
+    margin: 6px ;
+    font-size: 7vw;
+  }
+  #heading {
+    margin-top: 25vw;
+    margin-left: 6vw;
+  }
+  .head {
+    height: 15vw;
+  }
+  #heading h1 {
+    font-size: 13vw;
+  }
+  #page-2 {
+    height: 50vh;
+  }
+  #page-3 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px;
+  }
+  #p3left {
+    height: 60vh;
+    width: 100vw;
+  }
+  #p3ryt {
+    display: flex;
+    align-items: center;
+    gap: 9vw;
+    width: 100%;
+  }
+  #p3ryt p {
+    width: 90%;
+    font-size: 6.5vw;
+    font-weight: 100;
+    line-height: 7vw;
+  }
+  #p3btn {
+    padding: 70px 120px;
+  }
+  #p3btn h3 {
+    font-size: 6vw;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  #project-page {
+    height: fit-content;
+    width: 100%;
+    background-color: #161616;
+    border-radius: 80px;
+    margin-top: 8vh;
+    padding: 30vw 10vw;
+  }
+  #projects {
+    display: block;
+  }
+  #project-heading h1 {
+    font-size: 9vw;
+    letter-spacing: -1px;
+  }
+  #project-heading video {
+    height: 60px;
+    width: 80px;
+    margin-top: 10px;
+  }
+  .project-1 {
+    margin-top: 100px;
+  }
+  .project-2 {
+    margin-top: 50px;
+  }
+  #image-container1 {
+    height: 50vh;
+    width: 38vh;
+  }
+  #image-container2 {
+    height: 38vh;
+    width: 38vh;
+  }
+  .project-1 h2 {
+    font-size: 5vw;
+  }
+  .project-2 h2 {
+    font-size: 5vw;
+  }
+  .project-2:nth-child(5) {
+    margin-top: 50px;
+  }
+  #philosophy h1 {
+    font-size: 16vw;
+  }
+  #para {
+    margin-top: 12vw;
+    gap:5vh;
+    flex-direction: column;
+  }
+  #para video {
+    height: 40vh;
+    width: 40vh;
+  }
+  #para p {
+    width: 90%;
+    text-align: center;
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+  .loop {
+    margin-top: 10vh;
+    gap: 5vh;
+  }
+  .loop h1 {
+    font-size: 20vw;
+    letter-spacing: -5px;
+  }
+  .loop video {
+    height: 8vh;
+    width: 10vh;
+  }
+  #project-window {
+    gap: 2vh;
+    padding: 8vh;
+  }
+  .window1 {
+    height: 25vh;
+    width: 32vh;
+  }
+  .window2 {
+    height: 32vh;
+    width: 32vh;
+  }
+  #footer-details h1 {
+    line-height: 15vw;
+    font-size: 20vw;
+  }
+  #footer-details i {
+    font-size: 15vw;
+  }
+  #footer-button {
+    margin-top: 5vh;
+    padding: 1vh 3vh;
+  }
+  #footer-button h3 {
+    font-size: 10vw;
+  }
+  #footer h5 {
+    position: absolute;
+    bottom: 5%;
+    margin-top: 0;
+  }
+}
